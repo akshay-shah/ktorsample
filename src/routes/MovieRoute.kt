@@ -63,6 +63,9 @@ fun Route.movieRouting() {
     }
 }
 
+/**
+ * registering a movie route
+ */
 fun Application.registerMovieRoutes() {
     routing {
         movieRouting()

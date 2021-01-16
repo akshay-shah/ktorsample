@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "3c900f16-c4bf-4e19-a304-2d7d8972ec75",
+		"name": "movie",
+		"description": "Sample Ktor Movie API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALL MOVIES",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept-encoding": true,
+					"connection": true,
+					"host": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/movie",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"movie"
+					]
+				},
+				"description": "gets all movies in temporary storage."
+			},
+			"response": []
+		},
+		{
+			"name": "GET MOVIE BY ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"host": true,
+					"accept-encoding": true,
+					"connection": true,
+					"content-length": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/movie/102",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"movie",
+						"102"
+					]
+				},
+				"description": "gets you the movie by id"
+			},
+			"response": []
+		},
+		{
+			"name": "ADD MOVIE",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"103\",\n    \"movieName\":\"Saw\",\n    \"movieGenre\":\"horror\",\n    \"releaseDate\":\"2010\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/movie",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"movie"
+					]
+				},
+				"description": "adds a new movie to our temporary dataset"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE MOVIE BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "delets a movie by id"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
